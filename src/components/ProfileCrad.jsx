@@ -8,7 +8,7 @@ const Profilecrad = () => {
 
         </div>
 
-        <div className="profile_info">
+        <div className="profile-info">
             <h2>เกียรติศักดิ์ วชิรศิริกุล</h2>
             <p className="role">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Error ea nulla voluptate exercitationem temporibus sit eaque in? Porro, aliquid ut fugit eius aut veniam voluptatibus tempora error cumque illum nostrum?</p>
             <p className="bio">ดูการ์ตูน</p>

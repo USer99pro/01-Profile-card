@@ -1,6 +1,80 @@
-.profile-card{
-    max-width: 400px;
-    margin:  0 auto;
-    border-radius: 25% ;
+.profile-card {
+    max-width: 500px;
+    margin: 0 auto;
+    background-color: antiquewhite ;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px gray;
+    overflow: hidden;
+    transition: tranform 0.3s ease;
+}
 
+.profile-card:hover { /* when your mouse pointer hover over the component */
+    transform: translateY(-5px); /*move up (Y) when mouse is hovering over*/
+    box-shadow: 0 15px 45px black; /*shadow color change when hovering over*/
+    
+}
+
+.profile-image {
+    padding: 10px;
+    text-align: center;
+    background-color: aqua; 
+}
+.profile-image img { /* custom the image itself not the entire component like the one above*/
+    width: 150px;
+    height: 150px;
+    border-radius: 50%; /*make the image round (Circle)*/
+    border: 10px solid white; /*image border outline*/
+    object-fit: cover;
+}
+.profile-image img:hover { /* custom the image itself not the entire component like the one above*/
+    transform: scale(1.05); 
+    transition: all 0.3s ease;
+}
+.profile-info{
+    padding: 30px;
+    text-align: center;
+}
+.profile-info h2{
+    margin: 0 0 10px 0;
+    color: green;
+    font-size: 30px;
+    text-shadow: 0 3px 5px lightcyan;
+}
+
+.role{
+    color: black;
+    line-height: 1.6;
+    margin-bottom: 10px;
+    font-size: 20px;
+    font-weight: 600; /*font boldness*/
+}
+
+.bio{
+    color:darkred;
+    line-height: 1.5;
+    margin-bottom: 25px;
+    font-size: 16px
+}
+
+.social-links{
+    display: flex; /*make everythinig stuck together for some reason*/
+    gap: 25px; /*the gap between each content after you make them stuck together for some reason*/
+    justify-content: center;
+}
+
+.btn{
+    padding: 10px 20px;
+    border:2px solid blue;
+    border-radius: 25px;
+    font-weight: 600;
+    text-decoration: none;
+    display: inline-block;
+    background: transparent;
+    color:blue;
+    transition: all 0.3s ease;
+}
+
+.btn:hover{
+    background:white;
+    transform: scale(1.05);
 }
