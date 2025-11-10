@@ -1,80 +1,145 @@
-.profile-card {
-    max-width: 500px;
+/* ====== พื้นหลังหลัก ====== */
+body {
+    background:url(https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fstatic.vecteezy.com%2Fsystem%2Fresources%2Fpreviews%2F024%2F081%2F403%2Flarge_2x%2Fempty-dark-room-modern-futuristic-sci-fi-background-free-photo.jpg&f=1&nofb=1&ipt=f9158551f72205237a5c564d4c8d944f6c245303c722eee4270cb5d10408e2e7) ;
+    font-family: "Poppins", sans-serif;
+    margin: 0;
+    padding: 40px;
+}
+
+/* ====== โครงสร้างรวมการ์ด ====== */
+.profile-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    max-width: 1200px;
     margin: 0 auto;
-    background-color: antiquewhite ;
+    padding: 20px;
+}
+
+/* ====== การ์ดหลัก ====== */
+.profile-card {
+    background: #fff;
     border-radius: 20px;
-    box-shadow: 0 10px 30px gray;
+    box-shadow: 0 6px 25px rgba(0, 0, 0, 0.08);
     overflow: hidden;
-    transition: tranform 0.3s ease;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
-.profile-card:hover { /* when your mouse pointer hover over the component */
-    transform: translateY(-5px); /*move up (Y) when mouse is hovering over*/
-    box-shadow: 0 15px 45px black; /*shadow color change when hovering over*/
-    
+.profile-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
 }
 
+/* ====== ส่วนรูปด้านบน ====== */
 .profile-image {
-    padding: 10px;
     text-align: center;
-    background-color: aqua; 
+    background: #f9fafb;
+    padding: 25px;
+    border-bottom: 1px solid #eee;
 }
-.profile-image img { /* custom the image itself not the entire component like the one above*/
-    width: 150px;
-    height: 150px;
-    border-radius: 50%; /*make the image round (Circle)*/
-    border: 10px solid white; /*image border outline*/
+
+.profile-image img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
     object-fit: cover;
+    border: 4px solid #fff;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
 }
-.profile-image img:hover { /* custom the image itself not the entire component like the one above*/
-    transform: scale(1.05); 
-    transition: all 0.3s ease;
+
+.profile-image img:hover {
+    transform: scale(1.05);
 }
-.profile-info{
-    padding: 30px;
+
+/* ====== ข้อมูลภายใน ====== */
+.profile-info {
     text-align: center;
-}
-.profile-info h2{
-    margin: 0 0 10px 0;
-    color: green;
-    font-size: 30px;
-    text-shadow: 0 3px 5px lightcyan;
+    padding: 25px;
 }
 
-.role{
-    color: black;
-    line-height: 1.6;
-    margin-bottom: 10px;
+.profile-info h2 {
+    margin: 10px 0 5px;
     font-size: 20px;
-    font-weight: 600; /*font boldness*/
+    color: #111827;
 }
 
-.bio{
-    color:darkred;
+.role {
+    color: #4b5563;
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+.bio {
+    color: #6b7280;
+    font-size: 13px;
     line-height: 1.5;
-    margin-bottom: 25px;
-    font-size: 16px
+    margin-bottom: 20px;
 }
 
-.social-links{
-    display: flex; /*make everythinig stuck together for some reason*/
-    gap: 25px; /*the gap between each content after you make them stuck together for some reason*/
+/* ====== ปุ่มลิงก์ ====== */
+.social-links {
+    display: flex;
     justify-content: center;
+    gap: 15px;
+    padding-bottom: 20px;
 }
 
-.btn{
-    padding: 10px 20px;
-    border:2px solid blue;
-    border-radius: 25px;
+.btn {
+    padding: 10px 18px;
+    border-radius: 10px;
     font-weight: 600;
     text-decoration: none;
-    display: inline-block;
-    background: transparent;
-    color:blue;
+    color: #fff;
+    background-color: #111827;
+    border: none;
     transition: all 0.3s ease;
 }
 
-.btn:hover{
-    background:white;
+.btn:hover {
+    background-color: #374151;
     transform: scale(1.05);
+}
+
+/* ====== Responsive ปรับขนาดหน้าจอ ====== */
+@media (max-width: 1024px) {
+    .profile-info h2 {
+        font-size: 18px;
+    }
+    .role {
+        font-size: 13px;
+    }
+}
+
+@media (max-width: 768px) {
+    body {
+        padding: 20px;
+    }
+    .profile-container {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .profile-info {
+        padding: 20px;
+    }
+    .profile-info h2 {
+        font-size: 16px;
+    }
+    .role {
+        font-size: 12px;
+    }
+    .bio {
+        font-size: 12px;
+    }
+    .btn {
+        padding: 8px 14px;
+        font-size: 13px;
+    }
 }

@@ -1,5 +1,5 @@
 import './App.css'
-import Profilecrad from './components/Profilecrad'
+import Profilecrad from './components/ProfileCrad'
 
 function App() {
 
